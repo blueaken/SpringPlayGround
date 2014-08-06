@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [06/Aug/2014:13:04:49 -0700] "GET /SpringWeb/student HTTP/1.1" 404 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [06/Aug/2014:13:05:37 -0700] "GET /HelloWeb/student HTTP/1.1" 404 - http-bio-8080-exec-2 0
+0:0:0:0:0:0:0:1 - - [06/Aug/2014:13:06:01 -0700] "GET /SpringMVCFormHandling/student HTTP/1.1" 200 745 http-bio-8080-exec-3 1076
+0:0:0:0:0:0:0:1 - - [06/Aug/2014:13:06:21 -0700] "POST /HelloWeb/addStudent HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [06/Aug/2014:13:06:35 -0700] "GET /SpringMVCFormHandling/addStudent HTTP/1.1" 405 1045 http-bio-8080-exec-5 7
+0:0:0:0:0:0:0:1 - - [06/Aug/2014:13:15:18 -0700] "GET /SpringMVCFormHandling/addStudent HTTP/1.1" 405 1045 http-bio-8080-exec-1 42
+0:0:0:0:0:0:0:1 - - [06/Aug/2014:13:16:36 -0700] "GET /SpringMVCFormHandling/student HTTP/1.1" 200 758 http-bio-8080-exec-3 655
+0:0:0:0:0:0:0:1 - - [06/Aug/2014:13:16:46 -0700] "POST /SpringMVCFormHandling/addStudent HTTP/1.1" 200 357 http-bio-8080-exec-4 168

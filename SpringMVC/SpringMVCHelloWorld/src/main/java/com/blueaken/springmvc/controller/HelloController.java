@@ -18,7 +18,7 @@ public class HelloController {
     public String printWelcome(ModelMap model) {
 
         model.addAttribute("message", "Spring 3 MVC Hello World");
-        return "hello";
+        return "hello";//return view name
 
     }
 

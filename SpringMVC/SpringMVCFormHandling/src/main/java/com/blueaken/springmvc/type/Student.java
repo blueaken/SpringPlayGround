@@ -1,4 +1,4 @@
-package com.blueaken.springmvc;
+package com.blueaken.springmvc.type;
 
 /**
  * @author jianshen

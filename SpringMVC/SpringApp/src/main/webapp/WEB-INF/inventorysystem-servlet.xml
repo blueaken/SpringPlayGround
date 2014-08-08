@@ -9,12 +9,55 @@
 
     <context:component-scan base-package="com.blueaken.springmvc" />
 
+    <bean id="productManager" class="com.blueaken.springmvc.service.SimpleProductManager">
+        <property name="products">
+            <list>
+                <ref bean="product1"/>
+                <ref bean="product2"/>
+                <ref bean="product3"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="product1" class="com.blueaken.springmvc.domain.Product">
+        <property name="description" value="Lamp"/>
+        <property name="price" value="5.75"/>
+    </bean>
+
+    <bean id="product2" class="com.blueaken.springmvc.domain.Product">
+        <property name="description" value="Table"/>
+        <property name="price" value="75.25"/>
+    </bean>
+
+    <bean id="product3" class="com.blueaken.springmvc.domain.Product">
+        <property name="description" value="Chair"/>
+        <property name="price" value="22.79"/>
+    </bean>
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="messages"/>
+    </bean>
+
+    <bean name="/hello.htm" class="com.blueaken.springmvc.web.InventoryController">
+        <property name="productManager" ref="productManager"/>
+    </bean>
+
+    <bean name="/priceincrease.htm" class="com.blueaken.springmvc.web.PriceIncreaseFormController">
+        <property name="sessionForm" value="true"/>
+        <property name="commandName" value="priceIncrease"/>
+        <property name="commandClass" value="com.blueaken.springmvc.service.PriceIncrease"/>
+        <property name="validator">
+            <bean class="com.blueaken.springmvc.service.PriceIncreaseValidator"/>
+        </property>
+        <property name="formView" value="priceincrease"/>
+        <property name="successView" value="hello.htm"/>
+        <property name="productManager" ref="productManager"/>
+    </bean>
+
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
     </bean>
-
-    <bean name="/hello.htm" class="com.blueaken.springmvc.web.HelloController"/>
 
 </beans>

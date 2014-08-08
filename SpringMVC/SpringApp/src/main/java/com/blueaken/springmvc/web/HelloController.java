@@ -1,4 +1,4 @@
-package com.blueaken.springmvc;
+package com.blueaken.springmvc.web;
 
 import org.springframework.web.servlet.mvc.Controller;
 import org.springframework.web.servlet.ModelAndView;

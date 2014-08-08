@@ -1,5 +1,6 @@
 package com.blueaken.springmvc;
 
+import com.blueaken.springmvc.web.HelloController;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

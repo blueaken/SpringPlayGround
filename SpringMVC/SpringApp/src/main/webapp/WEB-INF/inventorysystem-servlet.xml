@@ -12,8 +12,9 @@
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
     </bean>
 
-    <bean name="/hello.htm" class="springapp.web.HelloController"/>
+    <bean name="/hello.htm" class="com.blueaken.springmvc.HelloController"/>
 
 </beans>

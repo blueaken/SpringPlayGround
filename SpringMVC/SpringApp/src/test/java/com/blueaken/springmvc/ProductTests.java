@@ -1,6 +1,7 @@
 package com.blueaken.springmvc;
 
 import com.blueaken.springmvc.domain.Product;
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -9,9 +10,15 @@ import static org.junit.Assert.assertNull;
  * Author: blueaken
  * Date: 8/7/14 11:15 下午
  */
-public class ProductTest {
+public class ProductTests {
 
-    private Product product = new Product();
+    private Product product;
+
+    @Before
+    public void setUp() throws Exception {
+        product = new Product();
+    }
+
 
     @Test
     public void testSetAndGetDescription() {

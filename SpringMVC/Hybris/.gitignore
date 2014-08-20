@@ -1,0 +1,27 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Log files #
+*.log
+
+# Temp config files #
+temp_persist_config_*.xml
+
+# Idea project files #
+*.iml
+
+target
+.settings/
+.classpath
+.project
+.idea/
+*.iml
+*.ipr
+*.iws
+ebay.log
+MANIFEST.MF
+4cc.checksum

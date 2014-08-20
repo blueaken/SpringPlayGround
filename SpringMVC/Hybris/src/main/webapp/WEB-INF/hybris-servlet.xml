@@ -1,0 +1,64 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+   http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:component-scan base-package="com.hybris.test" />
+
+    <bean id="productManager" class="com.hybris.test.model.HybrisProductManager">
+        <property name="products">
+            <list>
+                <ref bean="product1"/>
+                <ref bean="product2"/>
+                <ref bean="product3"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="product1" class="com.hybris.test.model.Product">
+        <property name="sku" value="123"/>
+        <property name="color" value="RED"/>
+        <property name="name" value="Window"/>
+        <property name="description" value="window of the house"/>
+        <property name="price" value="6.85"/>
+    </bean>
+
+    <bean id="product2" class="com.hybris.test.model.Product">
+        <property name="sku" value="133"/>
+        <property name="color" value="BLACK"/>
+        <property name="name" value="Door"/>
+        <property name="description" value="door of the house"/>
+        <property name="price" value="9.25"/>
+    </bean>
+
+    <bean id="product3" class="com.hybris.test.model.Product">
+        <property name="sku" value="143"/>
+        <property name="color" value="BLUE"/>
+        <property name="name" value="Stair"/>
+        <property name="description" value="stair of the house"/>
+        <property name="price" value="36.15"/>
+    </bean>
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="info/messages"/>
+    </bean>
+
+    <bean name="/products" class="com.hybris.test.controller.ProductController">
+        <property name="productManager" ref="productManager"/>
+    </bean>
+
+    <bean name="/productDetails" class="com.hybris.test.controller.ProductDetailsController">
+        <property name="productManager" ref="productManager"/>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+    </bean>
+
+</beans>

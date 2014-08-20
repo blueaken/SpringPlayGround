@@ -7,9 +7,9 @@
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <context:component-scan base-package="com.hybris.test" />
+    <context:component-scan base-package="com.hybris.product" />
 
-    <bean id="productManager" class="com.hybris.test.model.HybrisProductManager">
+    <bean id="productManager" class="com.hybris.product.model.HybrisProductManager">
         <property name="products">
             <list>
                 <ref bean="product1"/>
@@ -19,7 +19,7 @@
         </property>
     </bean>
 
-    <bean id="product1" class="com.hybris.test.model.Product">
+    <bean id="product1" class="com.hybris.product.model.Product">
         <property name="sku" value="123"/>
         <property name="color" value="RED"/>
         <property name="name" value="Window"/>
@@ -27,7 +27,7 @@
         <property name="price" value="6.85"/>
     </bean>
 
-    <bean id="product2" class="com.hybris.test.model.Product">
+    <bean id="product2" class="com.hybris.product.model.Product">
         <property name="sku" value="133"/>
         <property name="color" value="BLACK"/>
         <property name="name" value="Door"/>
@@ -35,7 +35,7 @@
         <property name="price" value="9.25"/>
     </bean>
 
-    <bean id="product3" class="com.hybris.test.model.Product">
+    <bean id="product3" class="com.hybris.product.model.Product">
         <property name="sku" value="143"/>
         <property name="color" value="BLUE"/>
         <property name="name" value="Stair"/>
@@ -47,11 +47,11 @@
         <property name="basename" value="info/messages"/>
     </bean>
 
-    <bean name="/products" class="com.hybris.test.controller.ProductController">
+    <bean name="/products" class="com.hybris.product.controller.ProductController">
         <property name="productManager" ref="productManager"/>
     </bean>
 
-    <bean name="/productDetails" class="com.hybris.test.controller.ProductDetailsController">
+    <bean name="/productDetails" class="com.hybris.product.controller.ProductDetailsController">
         <property name="productManager" ref="productManager"/>
     </bean>
 

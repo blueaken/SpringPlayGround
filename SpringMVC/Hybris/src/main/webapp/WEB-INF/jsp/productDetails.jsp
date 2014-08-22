@@ -5,7 +5,7 @@
     <body>
       <h1><fmt:message key="heading"/></h1>
       <h3>Product Detail</h3>
-      <form:form>
+      <form:form method="POST" commandName="productForm">
             <table>
                 <tr>
                     <td><b>Product SKU</b></td>
@@ -22,6 +22,9 @@
                     <td><c:out value="${model.product.price}"/></td>
                 </tr>
             </table>
+            <tr>
+                <td colspan="5"><input type="submit" value="Add to cart"></td>
+            </tr>
       </form:form>
       <br><a href="<c:url value="products"/>">Home</a>
     </body>

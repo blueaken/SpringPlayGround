@@ -9,6 +9,11 @@
 
     <context:component-scan base-package="com.hybris.product" />
 
+    <bean class="com.hybris.product.controller.ProductFormController">
+        <property name="formView" value="productDetails" />
+        <property name="successView" value="productDetails" />
+    </bean>
+
     <bean id="productManager" class="com.hybris.product.model.HybrisProductManager">
         <property name="products">
             <list>

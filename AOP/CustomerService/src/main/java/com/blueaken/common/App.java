@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
     public static void main(String[] args) {
         ApplicationContext appContext = new ClassPathXmlApplicationContext(
-                new String[] { "Spring-Customer.xml" });
+                new String[] {"spring.xml"});
 
         CustomerService cust = (CustomerService) appContext.getBean("customerServiceProxy");
 

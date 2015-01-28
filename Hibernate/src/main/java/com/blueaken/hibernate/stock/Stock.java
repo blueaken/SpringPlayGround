@@ -1,5 +1,8 @@
 package com.blueaken.hibernate.stock;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Author: blueaken
  * Date: 12/8/14 1:47 下午
@@ -12,14 +15,9 @@ public class Stock implements java.io.Serializable {
     private String stockCode;
     private String stockName;
     private StockDetail stockDetail;
+    private Set<StockDailyRecord> stockDailyRecords = new HashSet<StockDailyRecord>(0);
 
     public Stock() {
-    }
-
-    public Stock(String stockCode, String stockName, StockDetail stockDetail) {
-        this.stockCode = stockCode;
-        this.stockName = stockName;
-        this.stockDetail = stockDetail;
     }
 
     public Integer getStockId() {
@@ -52,5 +50,13 @@ public class Stock implements java.io.Serializable {
 
     public void setStockDetail(StockDetail stockDetail) {
         this.stockDetail = stockDetail;
+    }
+
+    public Set<StockDailyRecord> getStockDailyRecords() {
+        return stockDailyRecords;
+    }
+
+    public void setStockDailyRecords(Set<StockDailyRecord> stockDailyRecords) {
+        this.stockDailyRecords = stockDailyRecords;
     }
 }

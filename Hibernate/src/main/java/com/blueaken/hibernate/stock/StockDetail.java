@@ -19,15 +19,6 @@ public class StockDetail implements java.io.Serializable {
     public StockDetail() {
     }
 
-
-    public StockDetail(Stock stock, String compName, String compDesc, String remark, Date listedDate) {
-        this.stock = stock;
-        this.compName = compName;
-        this.compDesc = compDesc;
-        this.remark = remark;
-        this.listedDate = listedDate;
-    }
-
     public Integer getStockId() {
         return stockId;
     }

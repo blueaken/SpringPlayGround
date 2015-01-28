@@ -11,7 +11,7 @@ import java.util.Date;
  * Author: blueaken
  * Date: 12/8/14 2:02 下午
  */
-public class Test {
+public class OneToOneTest {
 
     public static void main( String[] args )
     {

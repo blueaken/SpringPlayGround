@@ -3,7 +3,7 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="com.blueaken.hibernate.Stock" table="stock" catalog="hibernate">
+    <class name="com.blueaken.hibernate.stock.Stock" table="stock" catalog="hibernate">
         <id name="stockId" type="java.lang.Integer">
             <column name="STOCK_ID" />
             <generator class="identity" />
@@ -14,5 +14,7 @@
         <property name="stockName" type="string">
             <column name="STOCK_NAME" length="20" not-null="true" unique="true" />
         </property>
+        <one-to-one name="stockDetail" class="com.blueaken.hibernate.stock.StockDetail"
+                    cascade="save-update"></one-to-one>
     </class>
 </hibernate-mapping>

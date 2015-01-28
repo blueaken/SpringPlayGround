@@ -1,7 +1,11 @@
 package com.blueaken.hibernate;
 
-import com.blueaken.hibernate.persistence.HibernateUtil;
+import com.blueaken.hibernate.stock.Stock;
+import com.blueaken.hibernate.stock.StockDetail;
+import com.blueaken.hibernate.util.HibernateUtil;
 import org.hibernate.Session;
+
+import java.util.Date;
 
 /**
  * Author: blueaken
@@ -11,17 +15,29 @@ public class Test {
 
     public static void main( String[] args )
     {
-        System.out.println("Maven + Hibernate + MySQL");
+        System.out.println("Hibernate one to one (XML mapping)");
         Session session = HibernateUtil.getSessionFactory().openSession();
 
         session.beginTransaction();
+
         Stock stock = new Stock();
 
         stock.setStockCode("4715");
         stock.setStockName("GENM");
 
+        StockDetail stockDetail = new StockDetail();
+        stockDetail.setCompName("GENTING Malaysia");
+        stockDetail.setCompDesc("Best resort in the world");
+        stockDetail.setRemark("Nothing Special");
+        stockDetail.setListedDate(new Date());
+
+        stock.setStockDetail(stockDetail);
+        stockDetail.setStock(stock);
+
         session.save(stock);
         session.getTransaction().commit();
+
+        System.out.println("Done");
     }
 
 }

@@ -19,6 +19,10 @@ import javax.jms.Session;
  */
 
 //@Component
+    /*
+     参考：《Spring in Action》Chap 12 and
+     - https://dimitrisli.wordpress.com/2010/12/15/spring-activemq-maven-example/
+     */
 public class AlertServiceImpl implements AlertService{
 
     ApplicationContext context = new ClassPathXmlApplicationContext(

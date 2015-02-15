@@ -1,6 +1,5 @@
 package com.blueaken.springjms.domain;
 
-import com.bluekane.springjms.domain.Employee;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,6 +1,6 @@
-package com.bluekane.springjms.alerts;
+package com.blueaken.springjms.alerts;
 
-import com.bluekane.springjms.domain.Employee;
+import com.blueaken.springjms.domain.Employee;
 
 /**
  * Author: blueaken

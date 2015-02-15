@@ -1,6 +1,6 @@
-package com.bluekane.springjms.alerts;
+package com.blueaken.springjms.alerts;
 
-import com.bluekane.springjms.domain.Employee;
+import com.blueaken.springjms.domain.Employee;
 import org.apache.activemq.command.ActiveMQDestination;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

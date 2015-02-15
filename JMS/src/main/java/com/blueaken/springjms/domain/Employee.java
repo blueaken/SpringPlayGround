@@ -1,4 +1,4 @@
-package com.bluekane.springjms.domain;
+package com.blueaken.springjms.domain;
 
 import java.io.Serializable;
 

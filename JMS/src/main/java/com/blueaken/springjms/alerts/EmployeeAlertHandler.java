@@ -7,7 +7,7 @@ import com.blueaken.springjms.domain.Employee;
  * Date: 2/15/15 10:43 上午
  */
 public class EmployeeAlertHandler {
-    public void processSpittle(Employee employee) {
+    public void processEmployee(Employee employee) {
 // ... implementation goes here...
         System.out.println("************************");
         System.out.println("Receiving new employee info:");

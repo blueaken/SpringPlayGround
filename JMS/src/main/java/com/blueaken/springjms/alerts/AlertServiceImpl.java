@@ -18,7 +18,7 @@ import javax.jms.Session;
  * Date: 2/14/15 6:09 下午
  */
 
-//@Component
+
     /*
      参考：《Spring in Action》Chap 12 and
      - https://dimitrisli.wordpress.com/2010/12/15/spring-activemq-maven-example/
@@ -30,7 +30,6 @@ public class AlertServiceImpl implements AlertService{
 
     JmsTemplate jmsTemplate = (JmsTemplate) context.getBean("jmsTemplate");
     ActiveMQDestination destination = (ActiveMQDestination) context.getBean("queue");
-
 
     public void sendAlert(final Employee employee){
         jmsTemplate.send(

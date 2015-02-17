@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
  * Date: 2/14/15 10:19 下午
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"/spring.xml"})
+@ContextConfiguration(locations={"/test-spring.xml"})
 public class AlertServiceImplTests {
     public AlertServiceImpl alertService = new AlertServiceImpl();
 
